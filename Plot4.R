@@ -11,8 +11,8 @@ strDatetime <- with( DTs, (paste(Date, Time, sep="*")))
 datetime<-strptime(strDatetime,"%d/%m/%Y*%H:%M:%S")
 ## Open the PNG device
 png(filename = "Plot4.png",width=480, height=480, units="px")
-## create 4 transprent panels
-par(mfcol = c(2,2), bg=NA)
+## create 4  panels
+par(mfcol = c(2,2))
 ## Draw 1st plot
 plot(datetime, DTs$Global_active_power, ann=FALSE, type="n")
 box()

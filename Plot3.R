@@ -9,9 +9,8 @@ DTs <- subset(DT, Date=="1/2/2007" | Date == "2/2/2007")
 datetime <- with( DTs, (paste(Date, Time, sep="*")))
 ## Convert the list of concatenated strings to the list of time objects
 time<-strptime(datetime,"%d/%m/%Y*%H:%M:%S")
-## Open the PNG device and set a transparent background
+## Open the PNG device
 png(filename = "Plot3.png",width=480, height=480, units="px")
-par(bg=NA) 
 ## Draw a plot of the data with type="n" and default box
 plot(time, DTs$Sub_metering_1, ann=FALSE, type="n")
 box()
